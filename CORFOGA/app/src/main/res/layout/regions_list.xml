@@ -14,10 +14,7 @@
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
             android:background="@color/backgroudColor"
-            android:paddingBottom="16dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingTop="16dp"
+            android:padding="16dp"
             tools:context="com.example.dell.corfoga4.MainActivity">
             <Button
                 android:id="@+id/chorotega"
@@ -27,7 +24,7 @@
                 android:layout_alignParentStart="true"
                 android:backgroundTint="@color/colorPrimaryDark"
                 android:drawableLeft="@drawable/chorotega75px"
-                android:drawablePadding="8dp"
+                android:drawablePadding="@dimen/drawablePadding"
                 android:minHeight="140dp"
                 android:text="Región Chorotega"
                 android:textColor="@android:color/white" />
@@ -37,11 +34,11 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/chorotega"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="@dimen/marginTopRegions"
                 android:id="@+id/huetarNorte"
                 android:minHeight="140dp"
                 android:drawableLeft="@drawable/huetar_norte75px"
-                android:drawablePadding="8dp"
+                android:drawablePadding="@dimen/drawablePadding"
                 android:textColor="@android:color/white"
                 android:backgroundTint="@color/colorPrimaryDark" />
             <Button
@@ -50,11 +47,11 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/huetarNorte"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="@dimen/marginTopRegions"
                 android:id="@+id/brunca"
                 android:minHeight="140dip"
                 android:drawableLeft="@drawable/brunca75px"
-                android:drawablePadding="8dp"
+                android:drawablePadding="@dimen/drawablePadding"
                 android:textColor="@android:color/white"
                 android:backgroundTint="@color/colorPrimaryDark" />
             <Button
@@ -63,11 +60,11 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/brunca"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="@dimen/marginTopRegions"
                 android:id="@+id/huetarAtlantica"
                 android:minHeight="140dip"
                 android:drawableLeft="@drawable/huetar_atlantica75px"
-                android:drawablePadding="8dp"
+                android:drawablePadding="@dimen/drawablePadding"
                 android:textColor="@android:color/white"
                 android:backgroundTint="@color/colorPrimaryDark" />
             <Button
@@ -76,11 +73,11 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/huetarAtlantica"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="@dimen/marginTopRegions"
                 android:id="@+id/central"
                 android:minHeight="140dip"
                 android:drawableLeft="@drawable/central75px"
-                android:drawablePadding="8dp"
+                android:drawablePadding="@dimen/drawablePadding"
                 android:textColor="@android:color/white"
                 android:backgroundTint="@color/colorPrimaryDark" />
             <Button
@@ -89,11 +86,11 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/central"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="@dimen/marginTopRegions"
                 android:id="@+id/pacificoCentral"
                 android:minHeight="140dip"
                 android:drawableLeft="@drawable/pacifico_central75px"
-                android:drawablePadding="8dp"
+                android:drawablePadding="@dimen/drawablePadding"
                 android:textColor="@android:color/white"
                 android:backgroundTint="@color/colorPrimaryDark" />
             <Button
@@ -102,11 +99,11 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/pacificoCentral"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="@dimen/marginTopRegions"
                 android:id="@+id/todas"
                 android:minHeight="140dip"
                 android:drawableLeft="@drawable/todas75px"
-                android:drawablePadding="8dp"
+                android:drawablePadding="@dimen/drawablePadding"
                 android:textColor="@android:color/white"
                 android:backgroundTint="@color/colorPrimaryDark" />
         </RelativeLayout>
@@ -131,7 +128,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="0.37"
                 android:gravity="center"
-                android:text="Espere mientras termina la transacción"
+                android:text="@string/loading"
                 android:textAlignment="center"
                 android:textColor="#ffffff"
                 android:textSize="16sp" />

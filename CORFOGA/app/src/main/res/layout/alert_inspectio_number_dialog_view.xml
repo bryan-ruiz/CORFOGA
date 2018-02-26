@@ -14,29 +14,32 @@
         android:layout_gravity="center">
 
         <Button
+            android:id="@+id/inspectionOne"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button" />
+            android:text="1" />
 
         <Button
+            android:id="@+id/inspectionTwo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button" />
+            android:text="2" />
 
         <Button
+            android:id="@+id/inspectionThree"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button" />
+            android:text="3" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/inspectionFour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button" />
+            android:text="4" />
     </LinearLayout>
 
     </LinearLayout>

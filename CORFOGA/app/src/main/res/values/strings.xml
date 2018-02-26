@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">CORFOGA</string>
+    <string name="loginButton">Ingresar</string>
+    <string name="saveInspection">Guardar</string>
+    <string name="userName">Nombre de usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="loading">Espere mientras termina la transacción</string>
+
 </resources>
