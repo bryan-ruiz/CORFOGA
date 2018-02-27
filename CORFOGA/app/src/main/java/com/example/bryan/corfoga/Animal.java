@@ -8,14 +8,14 @@ public class Animal {
     private String asocebuId;
     private String animalId;
     private String gender;
-    private String birthDate;
+    private String birthdate;
     private int state;
 
-    public Animal(String asocebuId, String animalId, String gender, String birthDate, int state) {
+    public Animal(String asocebuId, String animalId, String gender, String birthdate, int state) {
         this.asocebuId = asocebuId;
         this.animalId = animalId;
         this.gender = gender;
-        this.birthDate = birthDate;
+        this.birthdate = birthdate;
         this.state = state;
     }
 
@@ -43,12 +43,12 @@ public class Animal {
         this.gender = gender;
     }
 
-    public String getBirthDate() {
-        return birthDate;
+    public String getBirthdate() {
+        return birthdate;
     }
 
-    public void setBirthDate(String birthDate) {
-        this.birthDate = birthDate;
+    public void setBirthDate(String birthdate) {
+        this.birthdate = birthdate;
     }
 
     public int getState() {
