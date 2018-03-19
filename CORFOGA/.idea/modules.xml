@@ -3,10 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CORFOGA.iml" filepath="$PROJECT_DIR$/CORFOGA.iml" />
-      <module fileurl="file://C:\Users\Bryan\Documents\GitHub\CORFOGA\CORFOGA\CORFOGA.iml" filepath="C:\Users\Bryan\Documents\GitHub\CORFOGA\CORFOGA\CORFOGA.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\ADRIAN\Documents\MyApplication\CORFOGA\app\app.iml" filepath="C:\Users\ADRIAN\Documents\MyApplication\CORFOGA\app\app.iml" />
-      <module fileurl="file://C:\Users\Bryan\Documents\GitHub\CORFOGA\CORFOGA\app\app.iml" filepath="C:\Users\Bryan\Documents\GitHub\CORFOGA\CORFOGA\app\app.iml" />
     </modules>
   </component>
 </project>

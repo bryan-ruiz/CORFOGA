@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimary">#EBEAE8</color>
+    <color name="darkGray">#D4D2BE</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="progressColor">#256b09</color>
-    <color name="backgroudColor">#ffffff</color>
-
-
+    <color name="backgroudColor">#FFFFFF</color>
+    <color name="backgroudColor11111">#3F51B5</color>
 </resources>

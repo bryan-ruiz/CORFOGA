@@ -29,7 +29,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Registro:"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/textSizeInspection"
                     android:textStyle="bold" />
                 <TextView
                     android:text="TextView"
@@ -37,7 +37,7 @@
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp" />
+                    android:textSize="@dimen/textSizeInspection" />
             </LinearLayout>
 
             <LinearLayout
@@ -51,7 +51,7 @@
                     android:layout_weight="3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/textSizeInspection"
                     android:textStyle="bold" />
                 <TextView
                     android:text="TextView"
@@ -59,7 +59,7 @@
                     android:layout_weight="3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp" />
+                    android:textSize="@dimen/textSizeInspection" />
             </LinearLayout>
 
             <LinearLayout
@@ -73,7 +73,7 @@
                     android:layout_weight="3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/textSizeInspection"
                     android:textStyle="bold" />
                 <TextView
                     android:text="TextView"
@@ -81,7 +81,7 @@
                     android:layout_weight="3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"/>
+                    android:textSize="@dimen/textSizeInspection"/>
             </LinearLayout>
 
             <LinearLayout
@@ -94,7 +94,7 @@
                     android:layout_weight="5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/textSizeInspection"
                     android:textStyle="bold" />
                 <TextView
                     android:text="TextView"
@@ -102,7 +102,7 @@
                     android:layout_weight="5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp" />
+                    android:textSize="@dimen/textSizeInspection" />
             </LinearLayout>
 
         </LinearLayout>
@@ -122,7 +122,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Inspección"
-                android:textSize="20sp"
+                android:textSize="@dimen/textSizeInspection"
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimary" />
         </LinearLayout>
@@ -138,9 +138,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="16dp"
-            android:orientation="vertical" >
-            android:layout_marginLeft="@dimen/marginLeftInspection"
-            android:layout_marginRight="@dimen/marginRightInspection">
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_marginTop="@dimen/marginTop"
@@ -152,7 +150,7 @@
                     android:layout_weight="2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/textSizeInspection"
                     android:textStyle="bold" />
 
                 <EditText
@@ -182,7 +180,7 @@
                     android:layout_weight="2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/textSizeInspection"
                     android:textStyle="bold" />
 
                 <EditText
@@ -212,7 +210,7 @@
                     android:layout_weight="3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/textSizeInspection"
                     android:textStyle="bold" />
 
                 <Spinner
@@ -233,7 +231,7 @@
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/textSizeInspection"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -248,24 +246,6 @@
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content" />
-            </LinearLayout>
-
-            <LinearLayout
-
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:drawablePadding="8dp"
-                    android:id="@+id/btnInspeccion"
-                    android:textColor="@android:color/white"
-                    android:backgroundTint="@color/colorPrimary"
-                    android:text="@string/saveInspection"
-                    android:drawableLeft="@drawable/content_save" />
-
             </LinearLayout>
 
         </LinearLayout>

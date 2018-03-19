@@ -14,19 +14,21 @@
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
             android:background="@color/backgroudColor"
-            android:padding="16dp"
-            tools:context="com.example.dell.corfoga4.MainActivity">
+            android:padding="@dimen/paddingAll"
+            tools:context="com.example.dell.corfoga4.MainActivity"
+            android:backgroundTint="@color/colorPrimary">
             <Button
                 android:id="@+id/chorotega"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:backgroundTint="@color/colorPrimaryDark"
+                android:backgroundTint="@color/darkGray"
                 android:drawableLeft="@drawable/chorotega75px"
                 android:drawablePadding="@dimen/drawablePadding"
                 android:minHeight="140dp"
                 android:text="Región Chorotega"
+                android:textSize="@dimen/textSizeRegions"
                 android:textColor="@android:color/white" />
             <Button
                 android:text="Región Huetar Norte"
@@ -39,8 +41,9 @@
                 android:minHeight="140dp"
                 android:drawableLeft="@drawable/huetar_norte75px"
                 android:drawablePadding="@dimen/drawablePadding"
+                android:textSize="@dimen/textSizeRegions"
                 android:textColor="@android:color/white"
-                android:backgroundTint="@color/colorPrimaryDark" />
+                android:backgroundTint="@color/darkGray" />
             <Button
                 android:text="Región Brunca"
                 android:layout_width="match_parent"
@@ -52,8 +55,9 @@
                 android:minHeight="140dip"
                 android:drawableLeft="@drawable/brunca75px"
                 android:drawablePadding="@dimen/drawablePadding"
+                android:textSize="@dimen/textSizeRegions"
                 android:textColor="@android:color/white"
-                android:backgroundTint="@color/colorPrimaryDark" />
+                android:backgroundTint="@color/darkGray" />
             <Button
                 android:text="Región Huetar Atlántica"
                 android:layout_width="match_parent"
@@ -65,8 +69,9 @@
                 android:minHeight="140dip"
                 android:drawableLeft="@drawable/huetar_atlantica75px"
                 android:drawablePadding="@dimen/drawablePadding"
+                android:textSize="@dimen/textSizeRegions"
                 android:textColor="@android:color/white"
-                android:backgroundTint="@color/colorPrimaryDark" />
+                android:backgroundTint="@color/darkGray" />
             <Button
                 android:text=" Region Central"
                 android:layout_width="match_parent"
@@ -78,8 +83,9 @@
                 android:minHeight="140dip"
                 android:drawableLeft="@drawable/central75px"
                 android:drawablePadding="@dimen/drawablePadding"
+                android:textSize="@dimen/textSizeRegions"
                 android:textColor="@android:color/white"
-                android:backgroundTint="@color/colorPrimaryDark" />
+                android:backgroundTint="@color/darkGray" />
             <Button
                 android:text="Region Pacífico Central"
                 android:layout_width="match_parent"
@@ -91,21 +97,23 @@
                 android:minHeight="140dip"
                 android:drawableLeft="@drawable/pacifico_central75px"
                 android:drawablePadding="@dimen/drawablePadding"
+                android:textSize="@dimen/textSizeRegions"
                 android:textColor="@android:color/white"
-                android:backgroundTint="@color/colorPrimaryDark" />
+                android:backgroundTint="@color/darkGray" />
+
             <Button
-                android:text="Todo el País"
+                android:id="@+id/todas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/pacificoCentral"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/marginTopRegions"
-                android:id="@+id/todas"
-                android:minHeight="140dip"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:backgroundTint="@color/darkGray"
                 android:drawableLeft="@drawable/todas75px"
                 android:drawablePadding="@dimen/drawablePadding"
+                android:minHeight="140dip"
+                android:text="Todo el País"
                 android:textColor="@android:color/white"
-                android:backgroundTint="@color/colorPrimaryDark" />
+                android:textSize="@dimen/textSizeRegions" />
         </RelativeLayout>
         <LinearLayout
             android:id="@+id/progressBarLayout"
