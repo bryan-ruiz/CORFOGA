@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".RegionsActivity" />
+        <activity android:name=".FarmActivity" />
+        <activity android:name=".AnimalActivity" />
+        <activity android:name=".InspectionActivity"></activity>
     </application>
 
 </manifest>

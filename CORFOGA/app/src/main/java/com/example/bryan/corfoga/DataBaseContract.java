@@ -49,7 +49,6 @@ public class DataBaseContract {
                     DataBaseEntry.COLUMN_NAME_ANIMAL_BIRTHDATE + TEXT_TYPE + COMMA_SEP +
                     DataBaseEntry.COLUMN_NAME_ANIMAL_STATE + INTEGER_TYPE + COMMA_SEP +
                     DataBaseEntry.COLUMN_NAME_ANIMAL_GENDER + TEXT_TYPE +")";
-
     public static final String SQL_DELETE_ANIMAL =
             "DROP TABLE IF EXISTS " + DataBaseEntry.TABLE_NAME_ANIMAL;
 
