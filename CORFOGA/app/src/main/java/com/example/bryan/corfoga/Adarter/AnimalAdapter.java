@@ -1,4 +1,4 @@
-package com.example.bryan.corfoga;
+package com.example.bryan.corfoga.Adarter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,6 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+
+import com.example.bryan.corfoga.Class.Animal;
+import com.example.bryan.corfoga.R;
 
 import java.util.ArrayList;
 

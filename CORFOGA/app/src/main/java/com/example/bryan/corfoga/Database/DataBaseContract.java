@@ -1,4 +1,4 @@
-package com.example.bryan.corfoga;
+package com.example.bryan.corfoga.Database;
 import android.provider.BaseColumns;
 
 /**

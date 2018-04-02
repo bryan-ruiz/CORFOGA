@@ -1,4 +1,4 @@
-package com.example.bryan.corfoga;
+package com.example.bryan.corfoga.Activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
+import com.example.bryan.corfoga.Class.Animal;
+import com.example.bryan.corfoga.Adarter.AnimalAdapter;
+import com.example.bryan.corfoga.R;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.example.bryan.corfoga;
+package com.example.bryan.corfoga.Class;
 
 /**
  * Created by Bryan on 26/02/2018.
