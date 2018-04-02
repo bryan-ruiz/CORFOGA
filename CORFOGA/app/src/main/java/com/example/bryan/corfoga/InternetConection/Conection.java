@@ -16,9 +16,9 @@ import retrofit2.http.Path;
 
 
 public interface Conection {
-    /*@GET("/server/animales/animal/{id}/{pin}")
-    Call<estudiante> getAnimal(@Path("id") String carne, @Path("pin") int pin);
+    @GET("/server/animales/animal/{id}/{pin}")
+    Call<User> getUser(@Path("userName") String userName, @Path("password") String password);
 
-    @POST("/server-odonto/ConfigCita/InsertarCita/{carn}")
+    /*@POST("/server-odonto/ConfigCita/InsertarCita/{carn}")
     Call<Boolean> setUserSelectedDate(@Body Cita cita, @Path("carn") String carn);*/
 }
