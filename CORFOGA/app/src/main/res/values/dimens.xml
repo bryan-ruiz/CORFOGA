@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="marginTop">8dp</dimen>
+    <dimen name="marginTop">19dp</dimen>
+    <dimen name="paddingAll">16dp</dimen>
     <dimen name="marginLeftInspection">16dp</dimen>
     <dimen name="marginRightInspection">16dp</dimen>
     <dimen name="drawablePadding">8dp</dimen>
     <dimen name="marginTopRegions">20dp</dimen>
+    <dimen name="textSizeInspection">18sp</dimen>
+    <dimen name="textSizeRegions">20dp</dimen>
 
 </resources>

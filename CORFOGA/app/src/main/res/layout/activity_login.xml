@@ -5,8 +5,9 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    tools:context="com.example.bryan.corfoga.Activity.LoginActivity">
+    tools:context="com.example.bryan.corfoga.Activity.LoginActivity"
+    android:padding="@dimen/paddingAll"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -52,10 +53,17 @@
             android:layout_marginTop="12dp"
             android:weightSum="1">
             <ProgressBar
-                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleLarge"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.10" />
+                android:id="@+id/progressBar"
+                android:progressDrawable="@drawable/circular_progress_bar"
+                android:layout_below="@+id/login"
+                android:layout_alignRight="@+id/textView"
+                android:layout_alignEnd="@+id/textView"
+                android:layout_alignLeft="@+id/textview"
+                android:layout_alignStart="@+id/textview"
+                android:layout_alignParentBottom="true" />
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
@@ -66,6 +74,7 @@
                 android:textSize="16sp"
                 android:gravity="center"
                 android:textAlignment="center" />
+
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
