@@ -18,6 +18,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 import java.util.List;
 
+import com.example.bryan.corfoga.Class.User;
+import com.example.bryan.corfoga.Database.DataBaseHelper;
+import com.example.bryan.corfoga.InternetConection.Conection;
 import com.example.bryan.corfoga.R;
 
 public class LoginActivity extends AppCompatActivity {
@@ -86,12 +89,12 @@ public class LoginActivity extends AppCompatActivity {
                                         SQLiteDatabase db=admin.getWritableDatabase();
                                         fila=db.rawQuery("select usuario,contrasena from usuarios where usuario='"+usuario+"' and contrasena='"+contraseña+"'",null);
                                         if(fila.moveToFirst()!=true) {
-                                            admin.insertarUsuario(usuario,contraseña,response.body().get(0).getRemember_token());
+                                            //admin.insertarUsuario(usuario,contraseña,response.body().get(0).getRemember_token());
                                         }
                                         finish();
                                         ((EditText) findViewById(R.id.nombreUsuario)).setText("");
                                         ((EditText) findViewById(R.id.contraseña)).setText("");
-                                        Intent ven = new Intent(LoginActivity.this, RegionsActivity.class);
+                                        Intent ven = new Intent(LoginActivity.this, RegionActivity.class);
                                         startActivity(ven);
                                     }
                                     ingresar.setEnabled(true);
@@ -119,7 +122,7 @@ public class LoginActivity extends AppCompatActivity {
                             //datos ingresados son iguales
                             ((EditText) findViewById(R.id.nombreUsuario)).setText("");
                             ((EditText) findViewById(R.id.contraseña)).setText("");
-                            Intent ven = new Intent(LoginActivity.this, RegionsActivity.class);
+                            Intent ven = new Intent(LoginActivity.this, RegionActivity.class);
                             startActivity(ven);
                         }else{
                             //limpiamos los EditText
