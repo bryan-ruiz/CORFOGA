@@ -4,6 +4,8 @@ package com.example.bryan.corfoga.InternetConection;
  * Created by Bryan on 19/03/2018.
  */
 
+import com.example.bryan.corfoga.Class.User;
+
 import java.util.ArrayList;
 import java.util.List;
 

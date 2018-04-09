@@ -24,7 +24,6 @@ import com.example.bryan.corfoga.InternetConection.Conection;
 import com.example.bryan.corfoga.R;
 
 public class LoginActivity extends AppCompatActivity {
-
     Button loginButton;
     private Cursor fila;
     private String BASEURL ="https://mobilerest.herokuapp.com";
@@ -64,7 +63,7 @@ public class LoginActivity extends AppCompatActivity {
 
                     final String usuario = ((EditText) findViewById(R.id.nombreUsuario)).getText().toString();
                     final String contraseña = ((EditText) findViewById(R.id.contraseña)).getText().toString();
-                    if (isOnline()) {
+                    /*if (isOnline()) {
                         progressBar.setVisibility(View.VISIBLE);
                         Retrofit query = new Retrofit.Builder()
                                 .baseUrl(BASEURL)
@@ -73,7 +72,7 @@ public class LoginActivity extends AppCompatActivity {
 
                         Conection service = query.create(Conection.class);
 
-                        Call<List<User>> result = service.getCliente(usuario, contraseña);
+                        Call<User> result = service.userName(usuario, contraseña);
 
                         result.enqueue(new Callback<List<User>>() {
                             @Override
@@ -128,7 +127,7 @@ public class LoginActivity extends AppCompatActivity {
                             //limpiamos los EditText
                             Toast.makeText(getApplicationContext(),"Usuario o Contraseña Incorrecta",Toast.LENGTH_SHORT).show();
                         }
-                    }
+                    }*/
                 }
                 catch (Exception ex){
                     Toast.makeText(getApplicationContext(),"No se puede acceder al sistema",Toast.LENGTH_SHORT).show();
