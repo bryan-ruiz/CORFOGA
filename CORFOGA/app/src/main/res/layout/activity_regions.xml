@@ -14,10 +14,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
-            android:background="@color/backgroudColor"
+            android:background="@drawable/ElCerro"
             android:padding="@dimen/paddingAll"
-            tools:context="com.example.dell.corfoga4.MainActivity"
-            android:backgroundTint="@color/colorPrimary">
+            tools:context="com.example.dell.corfoga4.MainActivity">
             <Button
                 android:id="@+id/chorotega"
                 android:layout_width="match_parent"
@@ -30,7 +29,7 @@
                 android:minHeight="140dp"
                 android:text="Región Chorotega"
                 android:textSize="@dimen/textSizeRegions"
-                android:textColor="@android:color/white" />
+                android:textColor="@color/colorWords" />
             <Button
                 android:text="Región Huetar Norte"
                 android:layout_width="match_parent"
@@ -43,7 +42,7 @@
                 android:drawableLeft="@drawable/huetar_norte75px"
                 android:drawablePadding="@dimen/drawablePadding"
                 android:textSize="@dimen/textSizeRegions"
-                android:textColor="@android:color/white"
+                android:textColor="@color/colorWords"
                 android:backgroundTint="@color/darkGray" />
             <Button
                 android:text="Región Brunca"
@@ -57,7 +56,7 @@
                 android:drawableLeft="@drawable/brunca75px"
                 android:drawablePadding="@dimen/drawablePadding"
                 android:textSize="@dimen/textSizeRegions"
-                android:textColor="@android:color/white"
+                android:textColor="@color/colorWords"
                 android:backgroundTint="@color/darkGray" />
             <Button
                 android:text="Región Huetar Atlántica"
@@ -71,7 +70,7 @@
                 android:drawableLeft="@drawable/huetar_atlantica75px"
                 android:drawablePadding="@dimen/drawablePadding"
                 android:textSize="@dimen/textSizeRegions"
-                android:textColor="@android:color/white"
+                android:textColor="@color/colorWords"
                 android:backgroundTint="@color/darkGray" />
             <Button
                 android:text=" Region Central"
@@ -85,7 +84,7 @@
                 android:drawableLeft="@drawable/central75px"
                 android:drawablePadding="@dimen/drawablePadding"
                 android:textSize="@dimen/textSizeRegions"
-                android:textColor="@android:color/white"
+                android:textColor="@color/colorWords"
                 android:backgroundTint="@color/darkGray" />
             <Button
                 android:text="Region Pacífico Central"
@@ -99,7 +98,7 @@
                 android:drawableLeft="@drawable/pacifico_central75px"
                 android:drawablePadding="@dimen/drawablePadding"
                 android:textSize="@dimen/textSizeRegions"
-                android:textColor="@android:color/white"
+                android:textColor="@color/colorWords"
                 android:backgroundTint="@color/darkGray" />
 
             <Button
@@ -113,7 +112,7 @@
                 android:drawablePadding="@dimen/drawablePadding"
                 android:minHeight="140dip"
                 android:text="Todo el País"
-                android:textColor="@android:color/white"
+                android:textColor="@color/colorWords"
                 android:textSize="@dimen/textSizeRegions" />
         </RelativeLayout>
     </ScrollView>
