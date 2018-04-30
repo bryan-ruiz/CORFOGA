@@ -3,6 +3,8 @@ package com.example.bryan.corfoga.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -42,9 +44,16 @@ public class FarmActivity extends AppCompatActivity {
         int x = 0;
         listItems = new ArrayList<Farm>();
         while (x < 4) {
-            farm = new Farm("asdf"+x, "1");
+            farm = new Farm("asdf", "1"+x);
             x += 1;
             listItems.add(farm);
         }
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_options, menu);
+        return true;
     }
 }

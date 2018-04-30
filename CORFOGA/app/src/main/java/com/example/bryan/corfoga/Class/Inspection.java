@@ -1,44 +1,36 @@
 package com.example.bryan.corfoga.Class;
 
+import com.example.bryan.corfoga.Database.DataBaseHelper;
+import com.example.bryan.corfoga.Database.DataBaseContract;
 /**
  * Created by Bryan on 26/02/2018.
  */
 
 public class Inspection {
-    private String asocebuId;
-    private String animalId;
+    private String idInspection;
     private String weight;
     private String scrotalCircumference;
     private String FeedSystem;
     private String comment;
 
-    public Inspection(String asocebuId, String animalId, String weight, String scrotalCircumference, String feedSystem, String comment) {
-        this.asocebuId = asocebuId;
-        this.animalId = animalId;
+    public Inspection(String idInspection, String weight, String scrotalCircumference, String feedSystem, String comment) {
+        this.idInspection = idInspection;
         this.weight = weight;
         this.scrotalCircumference = scrotalCircumference;
         FeedSystem = feedSystem;
         this.comment = comment;
     }
 
-    public String getAsocebuId() {
-        return asocebuId;
+    public String getInspectionId() {
+        return this.idInspection;
     }
 
-    public void setAsocebuId(String asocebuId) {
-        this.asocebuId = asocebuId;
-    }
-
-    public String getAnimalId() {
-        return animalId;
-    }
-
-    public void setAnimalId(String animalId) {
-        this.animalId = animalId;
+    public void setInspectionId(String animalId) {
+        this.idInspection = animalId;
     }
 
     public String getWeight() {
-        return weight;
+        return this.weight;
     }
 
     public void setWeight(String weight) {
@@ -46,7 +38,7 @@ public class Inspection {
     }
 
     public String getScrotalCircumference() {
-        return scrotalCircumference;
+        return this.scrotalCircumference;
     }
 
     public void setScrotalCircumference(String scrotalCircumference) {
@@ -54,7 +46,7 @@ public class Inspection {
     }
 
     public String getFeedSystem() {
-        return FeedSystem;
+        return this.FeedSystem;
     }
 
     public void setFeedSystem(String feedSystem) {
@@ -62,10 +54,18 @@ public class Inspection {
     }
 
     public String getComment() {
-        return comment;
+        return this.comment;
     }
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    public String getIdInspection() {
+        return idInspection;
+    }
+
+    public void setIdInspection(String idInspection) {
+        this.idInspection = idInspection;
     }
 }

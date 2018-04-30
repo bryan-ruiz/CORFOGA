@@ -6,4 +6,9 @@
     <string name="password">Contraseña</string>
     <string name="loading">Espere mientras termina la transacción</string>
     <string name="save">Guardar</string>
+    <string name="listFarm">Lista de Fincas</string>
+    <string name="Asocebu">ID del ASOCEBU:</string>
+    <string name="Id_animal">ID del animal:</string>
+    <string name="Importar">Importar"</string>
+    <string name="Exportar">Exportar"</string>
 </resources>

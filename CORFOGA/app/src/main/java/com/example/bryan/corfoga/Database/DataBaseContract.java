@@ -10,14 +10,14 @@ public class DataBaseContract {
     public static class DataBaseEntry implements BaseColumns {
         public static final String TABLE_NAME_FARM = "Farm";
         public static final String COLUMN_NAME_FARM_ID = "farmId";
-        public static final String COLUMN_NAME_FARM_NAME_ = "name";
+        public static final String COLUMN_NAME_REGION_NAME = "regionName";
+        public static final String COLUMN_NAME_FARM_NAME = "name";
 
         public static final String TABLE_NAME_ANIMAL = "Animal";
-        public static final String COLUMN_NAME_ANIMAL_ASOCEBU_ID= "asocebuId";
+        public static final String COLUMN_NAME_ANIMAL_ASOCEBU_ID = "asocebuId";
         public static final String COLUMN_NAME_ANIMAL_ID = "animalId";
         public static final String COLUMN_NAME_ANIMAL_GENDER = "gender";
         public static final String COLUMN_NAME_ANIMAL_BIRTHDATE = "birthdate";
-        public static final String COLUMN_NAME_ANIMAL_STATE = "state";
 
         public static final String TABLE_NAME_INSPECTION = "Inspection";
         public static final String COLUMN_NAME_INSPECTION_ID = "inspectionId";
@@ -36,7 +36,8 @@ public class DataBaseContract {
     public static final String SQL_CREATE_FARM =
             "CREATE TABLE " + DataBaseEntry.TABLE_NAME_FARM + " (" +
                     DataBaseEntry.COLUMN_NAME_FARM_ID + TEXT_TYPE + "PRIMARY KEY" + COMMA_SEP +
-                    DataBaseEntry.COLUMN_NAME_FARM_NAME_ + TEXT_TYPE +")";
+                    DataBaseEntry.COLUMN_NAME_REGION_NAME + TEXT_TYPE  + COMMA_SEP +
+                    DataBaseEntry.COLUMN_NAME_FARM_NAME + TEXT_TYPE +")";
 
     public static final String SQL_DELETE_FARM =
             "DROP TABLE IF EXISTS " + DataBaseEntry.TABLE_NAME_FARM;
@@ -47,7 +48,6 @@ public class DataBaseContract {
                     DataBaseEntry.COLUMN_NAME_FARM_ID + TEXT_TYPE + "FOREIGN KEY" + COMMA_SEP +
                     DataBaseEntry.COLUMN_NAME_ANIMAL_ASOCEBU_ID + TEXT_TYPE + COMMA_SEP +
                     DataBaseEntry.COLUMN_NAME_ANIMAL_BIRTHDATE + TEXT_TYPE + COMMA_SEP +
-                    DataBaseEntry.COLUMN_NAME_ANIMAL_STATE + INTEGER_TYPE + COMMA_SEP +
                     DataBaseEntry.COLUMN_NAME_ANIMAL_GENDER + TEXT_TYPE +")";
     public static final String SQL_DELETE_ANIMAL =
             "DROP TABLE IF EXISTS " + DataBaseEntry.TABLE_NAME_ANIMAL;

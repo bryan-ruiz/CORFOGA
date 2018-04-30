@@ -39,6 +39,9 @@ public class LoginActivity extends AppCompatActivity {
         ingresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, RegionActivity.class);
+                startActivity(intent);
+                /*
                 try {
                     ingresar.setEnabled(false);
 
@@ -60,8 +63,8 @@ public class LoginActivity extends AppCompatActivity {
                                         DataBaseHelper admin = new DataBaseHelper(LoginActivity.this);
                                         SQLiteDatabase db = admin.getWritableDatabase();
                                         fila = db.rawQuery("select * from usuarios where usuario='" + userName + "' and contrasena='" + password + "'", null);
-                                        ((EditText) findViewById(R.id.nombreUsuario)).setText("");
-                                        ((EditText) findViewById(R.id.contraseña)).setText("");
+                                        ((EditText) findViewById(R.id.userName)).setText("");
+                                        ((EditText) findViewById(R.id.password)).setText("");
                                         if (fila.moveToFirst() != true) {
                                             ingresar.setEnabled(true);
                                             progressBar.setVisibility(View.GONE);
@@ -84,7 +87,7 @@ public class LoginActivity extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), "Error al generar las consultas",Toast.LENGTH_LONG).show();
                             ingresar.setEnabled(true);
                             progressBar.setVisibility(View.GONE);
-
+|
                             //Conexión con DB
                             DataBaseHelper admin=new DataBaseHelper(LoginActivity.this);
                             SQLiteDatabase db=admin.getWritableDatabase();
@@ -94,8 +97,8 @@ public class LoginActivity extends AppCompatActivity {
 
                             if(fila.moveToFirst()==true) {
                                 //datos ingresados son iguales
-                                ((EditText) findViewById(R.id.nombreUsuario)).setText("");
-                                ((EditText) findViewById(R.id.contraseña)).setText("");
+                                ((EditText) findViewById(R.id.userName)).setText("");
+                                ((EditText) findViewById(R.id.password)).setText("");
                                 Intent ven = new Intent(LoginActivity.this, RegionActivity.class);
                                 startActivity(ven);
                             }else{
@@ -107,7 +110,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 catch (Exception ex){
                     Toast.makeText(getApplicationContext(),"No se puede acceder al sistema",Toast.LENGTH_SHORT).show();
-                }
+                }*/
             }
         });
     }

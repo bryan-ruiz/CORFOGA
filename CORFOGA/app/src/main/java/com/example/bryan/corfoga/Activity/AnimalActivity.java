@@ -3,6 +3,8 @@ package com.example.bryan.corfoga.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -39,9 +41,16 @@ public class AnimalActivity extends AppCompatActivity {
         int x = 0;
         listItems = new ArrayList<Animal>();
         while (x < 4) {
-            animal = new Animal("a"+x,"a"+x,"a","a",1);
+            animal = new Animal("a"+x,"a"+x+x,"a","a");
             x += 1;
             listItems.add(animal);
         }
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_options, menu);
+        return true;
     }
 }

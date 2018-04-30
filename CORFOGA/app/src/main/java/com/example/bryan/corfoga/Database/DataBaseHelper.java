@@ -26,6 +26,11 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         super(context, name, factory, version, errorHandler);
     }
 
+    public Boolean deleteDB(Context context) {
+        boolean bool = context.deleteDatabase(DATABASE_NAME);
+        return bool; // true if deleted;
+    }
+
     @Override
     public void onCreate(SQLiteDatabase db) {
         // Crear la base de datos de la app
