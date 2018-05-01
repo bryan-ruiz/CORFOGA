@@ -9,5 +9,9 @@
     <dimen name="marginTopRegions">20dp</dimen>
     <dimen name="textSizeInspection">18sp</dimen>
     <dimen name="textSizeRegions">20dp</dimen>
+    <dimen name="dimenButton">21sp</dimen>
+    <dimen name="textTitleInspectionBotton">25dp</dimen>
+    <dimen name="textTitleInspectionLeft">5dp</dimen>
+    <dimen name="textTitleInspectionTop">10dp</dimen>
 
 </resources>

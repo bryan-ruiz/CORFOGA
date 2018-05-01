@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.bryan.corfoga.Class.Animal;
 import com.example.bryan.corfoga.Class.Farm;
 import com.example.bryan.corfoga.Adarter.FarmAdapter;
 import com.example.bryan.corfoga.R;

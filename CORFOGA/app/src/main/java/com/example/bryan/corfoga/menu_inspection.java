@@ -18,7 +18,6 @@ public class menu_inspection extends AppCompatActivity {
 
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
@@ -26,7 +25,6 @@ public class menu_inspection extends AppCompatActivity {
         inflater.inflate(R.menu.menu_save, menu);
         return true;
     }
-
 
     //Android Activity Lifecycle Method
 // called whenever an item in your options menu is selected

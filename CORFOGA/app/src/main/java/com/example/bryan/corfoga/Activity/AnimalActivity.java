@@ -32,7 +32,7 @@ public class AnimalActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Animal selectedAnimal = (Animal) listView.getItemAtPosition(i);
-                Intent intent = new Intent(getBaseContext(), InspectionActivity.class);
+                Intent intent = new Intent(getBaseContext(), AlertInspectionNumber.class);
                 startActivity(intent);
             }
         });

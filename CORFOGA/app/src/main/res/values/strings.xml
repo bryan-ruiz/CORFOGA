@@ -12,6 +12,7 @@
     <string name="listFarm">Lista de Animales</string>
     <string name="Asocebu">ID del ASOCEBU:</string>
     <string name="Id_animal">ID del animal:</string>
+    <string name="bottons">Escoja el número de inspección</string>
     <!-- Menus
     Palabras que se van a utilizar en los menus -->
     <string name="save">Guardar</string>
@@ -19,4 +20,9 @@
     <string name="Exportar">Exportar"</string>
     <string name="buscarAnimal">BuscarAnimal"</string>
     <string name="buscarFinca">BuscarFinca"</string>
+    <!-- Estilos botones -->
+    <string name="inspectionOne">Inspección 1</string>
+    <string name="inspectionTwo">Inspección 2</string>
+    <string name="inspectionThree">Inspección 3</string>
+    <string name="inspectionFour">Inspección 4</string>
 </resources>
