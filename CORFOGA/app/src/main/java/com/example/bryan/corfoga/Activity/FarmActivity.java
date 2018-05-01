@@ -54,6 +54,7 @@ public class FarmActivity extends AppCompatActivity {
     {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_options, menu);
+        inflater.inflate(R.menu.menu_buscador_fincas, menu);
         return true;
     }
 }

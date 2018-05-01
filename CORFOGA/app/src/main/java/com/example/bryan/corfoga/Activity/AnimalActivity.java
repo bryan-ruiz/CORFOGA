@@ -51,6 +51,7 @@ public class AnimalActivity extends AppCompatActivity {
     {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_options, menu);
+        inflater.inflate(R.menu.menu_buscador_animal, menu);
         return true;
     }
 }
