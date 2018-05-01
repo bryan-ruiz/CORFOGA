@@ -1,14 +1,20 @@
 <resources>
     <string name="app_name">CORFOGA</string>
+    <!-- Login
+    Palabras que se van a utilizar en login-->
     <string name="loginButton">Ingresar</string>
     <string name="saveInspection">Guardar</string>
     <string name="userName">Nombre de usuario</string>
     <string name="password">Contraseña</string>
     <string name="loading">Espere mientras termina la transacción</string>
-    <string name="save">Guardar</string>
+    <!-- Vistas
+    Palabras que se van a utlizar en las vistas animales y fincas en los items -->
     <string name="listFarm">Lista de Animales</string>
     <string name="Asocebu">ID del ASOCEBU:</string>
     <string name="Id_animal">ID del animal:</string>
+    <!-- Menus
+    Palabras que se van a utilizar en los menus -->
+    <string name="save">Guardar</string>
     <string name="Importar">Importar"</string>
     <string name="Exportar">Exportar"</string>
     <string name="buscarAnimal">BuscarAnimal"</string>

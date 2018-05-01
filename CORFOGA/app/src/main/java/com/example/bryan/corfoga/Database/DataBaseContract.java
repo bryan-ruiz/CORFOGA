@@ -1,10 +1,6 @@
 package com.example.bryan.corfoga.Database;
 import android.provider.BaseColumns;
 
-/**
- * Created by Bryan on 20/02/2018.
- */
-
 public class DataBaseContract {
     // Implementa la interfaz BaseColumns para heredar campos estandar del marco de Android _ID
     public static class DataBaseEntry implements BaseColumns {

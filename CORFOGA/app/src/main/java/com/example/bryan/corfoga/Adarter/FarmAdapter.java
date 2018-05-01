@@ -12,10 +12,6 @@ import com.example.bryan.corfoga.R;
 
 import java.util.ArrayList;
 
-/**
- * Created by Bryan on 12/03/2018.
- */
-
 public class FarmAdapter extends BaseAdapter {
     private ArrayList<Farm> listItems;
     private Context context;

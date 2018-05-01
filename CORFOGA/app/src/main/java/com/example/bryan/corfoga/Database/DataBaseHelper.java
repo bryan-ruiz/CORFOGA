@@ -5,9 +5,6 @@ import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-/**
- * Created by Bryan on 20/02/2018.
- */
 public class DataBaseHelper extends SQLiteOpenHelper {
     // debemos incrementar la version de la base de datos
     public static final int DATABASE_VERSION = 2;

@@ -9,10 +9,6 @@ import com.example.bryan.corfoga.Database.DataBaseHelper;
 import com.example.bryan.corfoga.Database.DataBaseContract;
 import java.util.ArrayList;
 
-/**
- * Created by Bryan on 29/04/2018.
- */
-
 public class Region {
     private String name;
     private ArrayList<Farm> farmsList;

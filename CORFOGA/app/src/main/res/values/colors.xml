@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Colores que se van a utilizar en la aplicación -->
     <color name="colorPrimary">#228F2E</color>
     <color name="darkGray">#D4D2BE</color>
     <color name="colorPrimaryDark">#303F9F</color>

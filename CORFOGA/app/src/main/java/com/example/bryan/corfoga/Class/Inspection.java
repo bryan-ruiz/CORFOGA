@@ -2,9 +2,6 @@ package com.example.bryan.corfoga.Class;
 
 import com.example.bryan.corfoga.Database.DataBaseHelper;
 import com.example.bryan.corfoga.Database.DataBaseContract;
-/**
- * Created by Bryan on 26/02/2018.
- */
 
 public class Inspection {
     private String idInspection;

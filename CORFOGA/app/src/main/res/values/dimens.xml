@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Dimenciones para las vistas -->
     <dimen name="marginTop">19dp</dimen>
     <dimen name="paddingAll">16dp</dimen>
     <dimen name="marginLeftInspection">16dp</dimen>

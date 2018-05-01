@@ -1,9 +1,5 @@
 package com.example.bryan.corfoga.Class;
 
-/**
- * Created by ADRIAN on 2/4/2018.
- */
-
 public class User {
     private String userName;
     private String password;

@@ -9,11 +9,6 @@ import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
 
-
-/**
- * Created by Bryan on 26/02/2018.
- */
-
 public class Farm {
     private String idFarm;
     private String name;
