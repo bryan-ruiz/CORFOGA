@@ -25,4 +25,11 @@
     <string name="inspectionTwo">Inspección 2</string>
     <string name="inspectionThree">Inspección 3</string>
     <string name="inspectionFour">Inspección 4</string>
+
+    <string-array name="alimento">
+        <item>1.Pastoreo</item>
+        <item>2.Semi Estabulación</item>
+        <item>3.Estabulación</item>
+        <item>4.Suplemento en Potrero</item>
+    </string-array>
 </resources>

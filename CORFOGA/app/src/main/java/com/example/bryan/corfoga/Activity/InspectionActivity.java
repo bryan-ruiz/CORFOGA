@@ -19,6 +19,7 @@ public class InspectionActivity extends AppCompatActivity {
     {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_save, menu);
+        
         return true;
     }
 }
