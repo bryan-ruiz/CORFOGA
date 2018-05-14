@@ -5,9 +5,6 @@ import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-/**
- * Created by Bryan on 20/02/2018.
- */
 public class DataBaseHelper extends SQLiteOpenHelper {
     // debemos incrementar la version de la base de datos
     public static final int DATABASE_VERSION = 2;
@@ -26,9 +23,15 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         super(context, name, factory, version, errorHandler);
     }
 
+    public Boolean deleteDB(Context context) {
+        boolean bool = context.deleteDatabase(DATABASE_NAME);
+        return bool; // true if deleted;
+    }
+
     @Override
     public void onCreate(SQLiteDatabase db) {
         // Crear la base de datos de la app
+        db.execSQL(DataBaseContract.SQL_CREATE_USER);
         db.execSQL(DataBaseContract.SQL_CREATE_FARM);
         db.execSQL(DataBaseContract.SQL_CREATE_ANIMAL);
         db.execSQL(DataBaseContract.SQL_CREATE_INSPECTION);
@@ -39,5 +42,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL(DataBaseContract.SQL_DELETE_INSPECTION);
         db.execSQL(DataBaseContract.SQL_DELETE_ANIMAL);
         db.execSQL(DataBaseContract.SQL_DELETE_FARM);
+        db.execSQL(DataBaseContract.SQL_DELETE_USER);
     }
 }

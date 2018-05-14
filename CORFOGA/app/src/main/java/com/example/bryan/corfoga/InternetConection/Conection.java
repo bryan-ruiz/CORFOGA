@@ -1,5 +1,8 @@
 package com.example.bryan.corfoga.InternetConection;
 
+import com.example.bryan.corfoga.Class.Animal;
+import com.example.bryan.corfoga.Class.Farm;
+import com.example.bryan.corfoga.Class.Inspection;
 import com.example.bryan.corfoga.Class.User;
 
 import com.example.bryan.corfoga.Class.User;
@@ -16,9 +19,14 @@ import retrofit2.http.Path;
 
 
 public interface Conection {
-    @GET("/server/animales/animal/{id}/{pin}")
-    Call<User> getUser(@Path("userName") String userName, @Path("password") String password);
-
-    /*@POST("/server-odonto/ConfigCita/InsertarCita/{carn}")
-    Call<Boolean> setUserSelectedDate(@Body Cita cita, @Path("carn") String carn);*/
+    @GET("/api/login/{user}/{pass}")
+    Call<User> getUser(@Path("user") String user, @Path("pass") String pass);
+    @GET("/api/fincas/get/{region}")
+    Call<List<Farm>> getFarmsFromRegion(@Path("region") int region);
+    @GET("/api/animales/get/{farm}")
+    Call<List<Animal>> getAnimalsFromFarm(@Path("farm") int farm);
+    @GET("/api/inspecciones/get/{anno}/{animal}")
+    Call<List<Inspection>> getInspectionsFromAnimal(@Path("anno") String anno, @Path("animal") int animal);
+    @POST("/api/inspecciones/create")
+    Call<String>addInspection(@Body Inspection inspection);
 }

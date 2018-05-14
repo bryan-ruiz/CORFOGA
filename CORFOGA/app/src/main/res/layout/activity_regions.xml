@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
-            android:background="@drawable/ElCerro"
+            android:background="@drawable/cerro"
             android:padding="@dimen/paddingAll"
             tools:context="com.example.dell.corfoga4.MainActivity">
             <Button

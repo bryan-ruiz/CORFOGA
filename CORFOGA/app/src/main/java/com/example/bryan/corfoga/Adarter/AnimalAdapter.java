@@ -12,10 +12,6 @@ import com.example.bryan.corfoga.R;
 
 import java.util.ArrayList;
 
-/**
- * Created by Bryan on 12/03/2018.
- */
-
 public class AnimalAdapter extends BaseAdapter {
     private ArrayList<Animal> listItems;
     private Context context;
@@ -43,9 +39,11 @@ public class AnimalAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         Animal animal = getItem(i);
-        view = LayoutInflater.from(this.context).inflate(R.layout.item_farm, null);
-        TextView textView = (TextView) view.findViewById(R.id.farmName);
-        textView.setText(animal.getAnimalId());
+        view = LayoutInflater.from(this.context).inflate(R.layout.listview_item_row_animal, null);
+        TextView idAnimal = (TextView) view.findViewById(R.id.itemsIdAnimal);
+        TextView idFarm = (TextView) view.findViewById(R.id.itemsIdAsocebu);
+        idAnimal.setText(String.valueOf(animal.getId()));
+        idFarm.setText(String.valueOf(animal.getAsocebuFarmID()));
         return view;
     }
 }

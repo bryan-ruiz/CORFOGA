@@ -1,31 +1,17 @@
 package com.example.bryan.corfoga.Class;
 
-/**
- * Created by ADRIAN on 2/4/2018.
- */
-
 public class User {
-    private String userName;
-    private String password;
+    private int idUsuario;
 
-    public User(String userName, String password) {
-        this.userName = userName;
-        this.password = password;
+    public User(int idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
-    public String getUserName() {
-        return userName;
+    public int getIdUsuario() {
+        return idUsuario;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
     }
 }
