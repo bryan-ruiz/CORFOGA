@@ -85,7 +85,7 @@ public class Inspection {
     }
 
     public String getWeight() {
-        return weight;
+        return this.weight;
     }
 
     public void setWeight(String weight) {
@@ -93,7 +93,7 @@ public class Inspection {
     }
 
     public String getScrotalCircumference() {
-        return scrotalCircumference;
+        return this.scrotalCircumference;
     }
 
     public void setScrotalCircumference(String scrotalCircumference) {

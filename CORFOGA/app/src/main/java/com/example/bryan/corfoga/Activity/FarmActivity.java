@@ -23,6 +23,7 @@ public class FarmActivity extends AppCompatActivity {
     private FarmAdapter farmAdapter;
     private ArrayList<Farm> listItems;
     private Farm farm;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,10 +48,11 @@ public class FarmActivity extends AppCompatActivity {
             }
         });
     }
+
     private void llenar() {
-        int x = 0;
         listItems = Global.getInstance().getFarmsList();
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {

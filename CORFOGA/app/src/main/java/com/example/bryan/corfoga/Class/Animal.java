@@ -55,7 +55,6 @@ public class Animal {
     public void setAsocebuFarmID(int asocebuFarmID) {
         this.asocebuFarmID = asocebuFarmID;
     }
-
     public String getRegister() {
         return register;
     }
@@ -63,7 +62,6 @@ public class Animal {
     public void setRegister(String register) {
         this.register = register;
     }
-
     public String getCode() {
         return code;
     }
@@ -71,7 +69,6 @@ public class Animal {
     public void setCode(String code) {
         this.code = code;
     }
-
     public String getSex() {
         return sex;
     }
@@ -81,7 +78,7 @@ public class Animal {
     }
 
     public String getBirthdate() {
-        return birthdate;
+        return this.birthdate;
     }
 
     public void setBirthdate(String birthdate) {

@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f4e63df0-da5d-4397-a037-bc2f89154e35" name="Default" comment="" />
+    <list default="true" id="f4e63df0-da5d-4397-a037-bc2f89154e35" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CORFOGA/app/src/main/java/com/example/bryan/corfoga/Class/InspectionToExport.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CORFOGA/app/src/main/java/com/example/bryan/corfoga/Class/ListToExport.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CORFOGA/app/src/main/res/drawable/ElCerro.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CORFOGA/app/src/main/res/layout/animals_list.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CORFOGA/app/src/main/res/layout/farms.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CORFOGA/app/src/main/res/layout/inspection.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CORFOGA/app/src/main/res/layout/item_farm.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CORFOGA/app/src/main/java/com/example/bryan/corfoga/Activity/AlertInspectionNumber.java" afterPath="$PROJECT_DIR$/CORFOGA/app/src/main/java/com/example/bryan/corfoga/Activity/AlertInspectionNumber.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CORFOGA/app/src/main/java/com/example/bryan/corfoga/Activity/AnimalActivity.java" afterPath="$PROJECT_DIR$/CORFOGA/app/src/main/java/com/example/bryan/corfoga/Activity/AnimalActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CORFOGA/app/src/main/java/com/example/bryan/corfoga/Activity/FarmActivity.java" afterPath="$PROJECT_DIR$/CORFOGA/app/src/main/java/com/example/bryan/corfoga/Activity/FarmActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CORFOGA/app/src/main/java/com/example/bryan/corfoga/Activity/InspectionActivity.java" afterPath="$PROJECT_DIR$/CORFOGA/app/src/main/java/com/example/bryan/corfoga/Activity/InspectionActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CORFOGA/app/src/main/java/com/example/bryan/corfoga/Activity/LoginActivity.java" afterPath="$PROJECT_DIR$/CORFOGA/app/src/main/java/com/example/bryan/corfoga/Activity/LoginActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CORFOGA/app/src/main/java/com/example/bryan/corfoga/Activity/RegionActivity.java" afterPath="$PROJECT_DIR$/CORFOGA/app/src/main/java/com/example/bryan/corfoga/Activity/RegionActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CORFOGA/app/src/main/java/com/example/bryan/corfoga/Adarter/AnimalAdapter.java" afterPath="$PROJECT_DIR$/CORFOGA/app/src/main/java/com/example/bryan/corfoga/Adarter/AnimalAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CORFOGA/app/src/main/java/com/example/bryan/corfoga/Class/Animal.java" afterPath="$PROJECT_DIR$/CORFOGA/app/src/main/java/com/example/bryan/corfoga/Class/Animal.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CORFOGA/app/src/main/java/com/example/bryan/corfoga/Class/Farm.java" afterPath="$PROJECT_DIR$/CORFOGA/app/src/main/java/com/example/bryan/corfoga/Class/Farm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CORFOGA/app/src/main/java/com/example/bryan/corfoga/Class/Inspection.java" afterPath="$PROJECT_DIR$/CORFOGA/app/src/main/java/com/example/bryan/corfoga/Class/Inspection.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CORFOGA/app/src/main/java/com/example/bryan/corfoga/Class/Region.java" afterPath="$PROJECT_DIR$/CORFOGA/app/src/main/java/com/example/bryan/corfoga/Class/Region.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CORFOGA/app/src/main/java/com/example/bryan/corfoga/Database/DataBaseContract.java" afterPath="$PROJECT_DIR$/CORFOGA/app/src/main/java/com/example/bryan/corfoga/Database/DataBaseContract.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CORFOGA/app/src/main/res/layout/activity_inspection.xml" afterPath="$PROJECT_DIR$/CORFOGA/app/src/main/res/layout/activity_inspection.xml" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

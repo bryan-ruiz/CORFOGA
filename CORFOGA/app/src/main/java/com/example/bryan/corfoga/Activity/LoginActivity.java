@@ -48,7 +48,6 @@ public class LoginActivity extends AppCompatActivity {
                 try {
                     userName = ((EditText) findViewById(R.id.userName)).getText().toString();
                     password = ((EditText) findViewById(R.id.password)).getText().toString();
-
                     if (!userName.equals("") && !password.equals("")) {
                         Retrofit query = new Retrofit.Builder()
                                 .baseUrl(Ip.getIpAddress())
@@ -66,7 +65,6 @@ public class LoginActivity extends AppCompatActivity {
                                     setToRegionsView(response.body().getIdUsuario());
                                 }
                             }
-
                             @Override
                             public void onFailure(Call<User> call, Throwable t) {
                                 checkDatabase();

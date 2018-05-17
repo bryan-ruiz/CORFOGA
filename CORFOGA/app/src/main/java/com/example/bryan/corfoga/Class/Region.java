@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
-
 import com.example.bryan.corfoga.Database.DataBaseHelper;
 import com.example.bryan.corfoga.Database.DataBaseContract;
 import java.util.ArrayList;
@@ -159,6 +158,4 @@ public class Region {
         while (cursor.moveToNext());
         return this.farmsList;
     }
-
-
 }

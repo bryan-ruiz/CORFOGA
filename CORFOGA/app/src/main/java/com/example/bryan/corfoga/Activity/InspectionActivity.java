@@ -10,7 +10,6 @@ import android.widget.MultiAutoCompleteTextView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.example.bryan.corfoga.Class.Animal;
 import com.example.bryan.corfoga.Class.Global;
 import com.example.bryan.corfoga.Class.Inspection;

@@ -57,7 +57,5 @@ public class AlertInspectionNumber extends AppCompatActivity{
                 startActivity(intent);
             }
         });
-
     }
-
 }
