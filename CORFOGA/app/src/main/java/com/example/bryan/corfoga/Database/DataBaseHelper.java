@@ -31,6 +31,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         // Crear la base de datos de la app
+        db.execSQL(DataBaseContract.SQL_CREATE_USER);
         db.execSQL(DataBaseContract.SQL_CREATE_FARM);
         db.execSQL(DataBaseContract.SQL_CREATE_ANIMAL);
         db.execSQL(DataBaseContract.SQL_CREATE_INSPECTION);
@@ -41,5 +42,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL(DataBaseContract.SQL_DELETE_INSPECTION);
         db.execSQL(DataBaseContract.SQL_DELETE_ANIMAL);
         db.execSQL(DataBaseContract.SQL_DELETE_FARM);
+        db.execSQL(DataBaseContract.SQL_DELETE_USER);
     }
 }

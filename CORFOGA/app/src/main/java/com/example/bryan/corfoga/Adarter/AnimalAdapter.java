@@ -40,10 +40,10 @@ public class AnimalAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         Animal animal = getItem(i);
         view = LayoutInflater.from(this.context).inflate(R.layout.listview_item_row_animal, null);
-        TextView textView = (TextView) view.findViewById(R.id.itemsIdAnimal);
-        TextView textView2 = (TextView) view.findViewById(R.id.itemsIdAsocebu);
-        textView.setText(animal.getAnimalId());
-        textView2.setText(animal.getAsocebuId());
+        TextView idAnimal = (TextView) view.findViewById(R.id.itemsIdAnimal);
+        TextView idFarm = (TextView) view.findViewById(R.id.itemsIdAsocebu);
+        idAnimal.setText(String.valueOf(animal.getId()));
+        idFarm.setText(String.valueOf(animal.getAsocebuFarmID()));
         return view;
     }
 }

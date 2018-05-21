@@ -4,26 +4,84 @@ import com.example.bryan.corfoga.Database.DataBaseHelper;
 import com.example.bryan.corfoga.Database.DataBaseContract;
 
 public class Inspection {
-    private String idInspection;
+    private int id;
+    private int asocebuFarmID;
+    private int userID;
+    private String datetime;
+    private int visitNumber;
+    private int animalID;
+    private int feedingMethodID;
     private String weight;
     private String scrotalCircumference;
-    private String FeedSystem;
-    private String comment;
+    private String observations;
 
-    public Inspection(String idInspection, String weight, String scrotalCircumference, String feedSystem, String comment) {
-        this.idInspection = idInspection;
+    public Inspection(int id, int asocebuFarmID, int userID, String datetime, int visitNumber, int animalID, int feedingMethodID, String weight, String scrotalCircumference, String observations) {
+        this.id = id;
+        this.asocebuFarmID = asocebuFarmID;
+        this.userID = userID;
+        this.datetime = datetime;
+        this.visitNumber = visitNumber;
+        this.animalID = animalID;
+        this.feedingMethodID = feedingMethodID;
         this.weight = weight;
         this.scrotalCircumference = scrotalCircumference;
-        FeedSystem = feedSystem;
-        this.comment = comment;
+        this.observations = observations;
     }
 
-    public String getInspectionId() {
-        return this.idInspection;
+    public int getId() {
+        return id;
     }
 
-    public void setInspectionId(String animalId) {
-        this.idInspection = animalId;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getAsocebuFarmID() {
+        return asocebuFarmID;
+    }
+
+    public void setAsocebuFarmID(int asocebuFarmID) {
+        this.asocebuFarmID = asocebuFarmID;
+    }
+
+    public int getUserID() {
+        return userID;
+    }
+
+    public void setUserID(int userID) {
+        this.userID = userID;
+    }
+
+    public String getDatetime() {
+        return datetime;
+    }
+
+    public void setDatetime(String datetime) {
+        this.datetime = datetime;
+    }
+
+    public int getVisitNumber() {
+        return visitNumber;
+    }
+
+    public void setVisitNumber(int visitNumber) {
+        this.visitNumber = visitNumber;
+    }
+
+    public int getAnimalID() {
+        return animalID;
+    }
+
+    public void setAnimalID(int animalID) {
+        this.animalID = animalID;
+    }
+
+    public int getFeedingMethodID() {
+        return feedingMethodID;
+    }
+
+    public void setFeedingMethodID(int feedingMethodID) {
+        this.feedingMethodID = feedingMethodID;
     }
 
     public String getWeight() {
@@ -42,27 +100,12 @@ public class Inspection {
         this.scrotalCircumference = scrotalCircumference;
     }
 
-    public String getFeedSystem() {
-        return this.FeedSystem;
+    public String getObservations() {
+        return observations;
     }
 
-    public void setFeedSystem(String feedSystem) {
-        FeedSystem = feedSystem;
+    public void setObservations(String observations) {
+        this.observations = observations;
     }
 
-    public String getComment() {
-        return this.comment;
-    }
-
-    public void setComment(String comment) {
-        this.comment = comment;
-    }
-
-    public String getIdInspection() {
-        return idInspection;
-    }
-
-    public void setIdInspection(String idInspection) {
-        this.idInspection = idInspection;
-    }
 }

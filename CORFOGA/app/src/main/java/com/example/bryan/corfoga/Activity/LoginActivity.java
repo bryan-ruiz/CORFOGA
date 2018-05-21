@@ -8,6 +8,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,100 +19,92 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 import java.util.List;
 
+import com.example.bryan.corfoga.Class.Global;
+import com.example.bryan.corfoga.Class.Login;
 import com.example.bryan.corfoga.Class.User;
 import com.example.bryan.corfoga.Database.DataBaseHelper;
 import com.example.bryan.corfoga.InternetConection.Conection;
+import com.example.bryan.corfoga.InternetConection.Ip;
 import com.example.bryan.corfoga.R;
 
 public class LoginActivity extends AppCompatActivity {
-    Button loginButton;
-    private Cursor fila;
-    private String BASEURL ="https://mobilerest.herokuapp.com";
-    LinearLayout progressBar;
+    private LinearLayout progressBar;
+    private Button login;
+    private String userName, password;
+    private Login loginDB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         progressBar = (LinearLayout) findViewById(R.id.progressBarLayout);
-
-        final Button ingresar = (Button) findViewById(R.id.login);
-        ingresar.setOnClickListener(new View.OnClickListener() {
+        login = (Button) findViewById(R.id.login);
+        loginDB = new Login();
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, RegionActivity.class);
-                startActivity(intent);
-                /*
+                login.setEnabled(false);
+                progressBar.setVisibility(View.VISIBLE);
                 try {
-                    ingresar.setEnabled(false);
-
-                    final String userName = ((EditText) findViewById(R.id.userName)).getText().toString();
-                    final String password = ((EditText) findViewById(R.id.password)).getText().toString();
-                    progressBar.setVisibility(View.VISIBLE);
-                    Retrofit query = new Retrofit.Builder()
-                            .baseUrl(BASEURL)
-                            .addConverterFactory(GsonConverterFactory.create())
-                            .build();
-                    Conection service = query.create(Conection.class);
-                    Call<User> result = service.getUser(userName, password);
-                    result.enqueue(new Callback<User>() {
-                        @Override
-                        public void onResponse(Call<User> call, Response<User> response) {
-                                try {
-                                    if (response.body() == null) {
-                                        //Toast.makeText(getApplicationContext(), response.body().get(0).getName(),Toast.LENGTH_LONG).show();
-                                        DataBaseHelper admin = new DataBaseHelper(LoginActivity.this);
-                                        SQLiteDatabase db = admin.getWritableDatabase();
-                                        fila = db.rawQuery("select * from usuarios where usuario='" + userName + "' and contrasena='" + password + "'", null);
-                                        ((EditText) findViewById(R.id.userName)).setText("");
-                                        ((EditText) findViewById(R.id.password)).setText("");
-                                        if (fila.moveToFirst() != true) {
-                                            ingresar.setEnabled(true);
-                                            progressBar.setVisibility(View.GONE);
-                                            Intent intent = new Intent(LoginActivity.this, RegionActivity.class);
-                                            startActivity(intent);
-                                        }
-                                    }
-                                    else {
-                                        ingresar.setEnabled(true);
-                                        progressBar.setVisibility(View.GONE);
-                                        Intent intent = new Intent(LoginActivity.this, RegionActivity.class);
-                                        startActivity(intent);
-                                    }
-                            } catch (Exception e) {
-                                e.printStackTrace();
+                    userName = ((EditText) findViewById(R.id.userName)).getText().toString();
+                    password = ((EditText) findViewById(R.id.password)).getText().toString();
+                    if (!userName.equals("") && !password.equals("")) {
+                        Retrofit query = new Retrofit.Builder()
+                                .baseUrl(Ip.getIpAddress())
+                                .addConverterFactory(GsonConverterFactory.create())
+                                .build();
+                        Conection conection = query.create(Conection.class);
+                        Call<User> result = conection.getUser(userName, password);
+                        result.enqueue(new Callback<User>() {
+                            @Override
+                            public void onResponse(Call<User> call, Response<User> response) {
+                                if (response.body() == null) {
+                                    checkDatabase();
+                                } else {
+                                    loginDB.addUserDB(getApplicationContext(), response.body(), userName, password);
+                                    setToRegionsView(response.body().getIdUsuario());
+                                }
                             }
-                        }
-                        @Override
-                        public void onFailure(Call<User> call, Throwable t) {
-                            Toast.makeText(getApplicationContext(), "Error al generar las consultas",Toast.LENGTH_LONG).show();
-                            ingresar.setEnabled(true);
-                            progressBar.setVisibility(View.GONE);
-|
-                            //Conexión con DB
-                            DataBaseHelper admin=new DataBaseHelper(LoginActivity.this);
-                            SQLiteDatabase db=admin.getWritableDatabase();
-                            fila=db.rawQuery("select usuario,contrasena from usuarios where usuario='"+userName+"' and contrasena='"+password+"'",null);
-                            //si la consulta devolvio algo
-                            Toast.makeText(getApplicationContext(), fila.toString(),Toast.LENGTH_LONG).show();
-
-                            if(fila.moveToFirst()==true) {
-                                //datos ingresados son iguales
-                                ((EditText) findViewById(R.id.userName)).setText("");
-                                ((EditText) findViewById(R.id.password)).setText("");
-                                Intent ven = new Intent(LoginActivity.this, RegionActivity.class);
-                                startActivity(ven);
-                            }else{
-                                //limpiamos los EditText
-                                Toast.makeText(getApplicationContext(),"Usuario o Contraseña Incorrecta",Toast.LENGTH_SHORT).show();
+                            @Override
+                            public void onFailure(Call<User> call, Throwable t) {
+                                checkDatabase();
                             }
-                        }
-                    });
+                        });
+                    }
+                    else {
+                        Toast.makeText(getApplicationContext(),"¡No pueden haber espacios vacíos, inténtelo nuevamente!",Toast.LENGTH_SHORT).show();
+                    }
+                    progressBar.setVisibility(View.GONE);
+                    login.setEnabled(true);
                 }
                 catch (Exception ex){
-                    Toast.makeText(getApplicationContext(),"No se puede acceder al sistema",Toast.LENGTH_SHORT).show();
-                }*/
+                    Toast.makeText(getApplicationContext(),"No se puede acceder al sistema, inténtelo más tarde",Toast.LENGTH_SHORT).show();
+                }
             }
         });
+    }
+
+    private void checkDatabase() {
+        User existInBD = loginDB.getUserFromDB(getApplicationContext(),userName, password);
+        if (existInBD != null) {
+            setToRegionsView(existInBD.getIdUsuario());
+        }
+        else {
+            Toast.makeText(getApplicationContext(), "¡Usuario o Contraseña incorrectos. Tambien es posible que los datos no estén sincronizados, por favor, busca internet! ", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    private void setToRegionsView(int id) {
+        Global global = Global.getInstance();
+        User user = new User(id);
+        global.setUser(user);
+        progressBar.setVisibility(View.GONE);
+        login.setEnabled(true);
+        toRegionsView();
+    }
+
+    private void toRegionsView() {
+        Intent intent = new Intent(LoginActivity.this, RegionActivity.class);
+        startActivity(intent);
     }
 }

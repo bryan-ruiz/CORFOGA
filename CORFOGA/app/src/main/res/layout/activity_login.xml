@@ -21,22 +21,24 @@
             app:srcCompat="@drawable/corfoga"
             android:id="@+id/imageView"
             android:layout_gravity="center"/>
+
         <EditText
-            android:layout_marginTop="25dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
             android:id="@+id/userName"
-            android:hint="@string/userName"/>
-        <EditText
-            android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
+            android:layout_marginTop="25dp"
             android:ems="10"
+            android:hint="@string/userName"
+            android:inputType="textPersonName" />
+
+        <EditText
             android:id="@+id/password"
-            android:hint="@string/password" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword" />
         <Button
             android:layout_marginTop="16dp"
             android:text="@string/loginButton"

@@ -6,18 +6,43 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import java.util.ArrayList;
 
 public class Farm {
-    private String idFarm;
+    private int asocebuID;
+    private int userID;
     private String name;
+    private String state;
+    private String created_at;
+    private String updated_at;
     private ArrayList<Animal> animalsList;
 
-    public Farm(String id,String name) {
-        this.idFarm = id;
+    public Farm(int asocebuID, int userID, String name, String state, String created_at, String updated_at) {
+        this.asocebuID = asocebuID;
+        this.userID = userID;
         this.name = name;
+        this.state = state;
+        this.created_at = created_at;
+        this.updated_at = updated_at;
         this.animalsList = new ArrayList<Animal>();
+    }
+
+    public int getAsocebuID() {
+        return asocebuID;
+    }
+
+    public void setAsocebuID(int asocebuID) {
+        this.asocebuID = asocebuID;
+    }
+
+    public int getUserID() {
+        return userID;
+    }
+
+    public void setUserID(int userID) {
+        this.userID = userID;
     }
 
     public String getName() {
@@ -28,16 +53,32 @@ public class Farm {
         this.name = name;
     }
 
-    public String getIdFarm() {
-        return this.idFarm;
+    public String getState() {
+        return state;
     }
 
-    public void setIdFarm(String idFarm) {
-        this.idFarm = idFarm;
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getCreated_at() {
+        return created_at;
+    }
+
+    public void setCreated_at(String created_at) {
+        this.created_at = created_at;
+    }
+
+    public String getUpdated_at() {
+        return updated_at;
+    }
+
+    public void setUpdated_at(String updated_at) {
+        this.updated_at = updated_at;
     }
 
     public ArrayList<Animal> getAnimalsList() {
-        return this.animalsList;
+        return animalsList;
     }
 
     public void setAnimalsList(ArrayList<Animal> animalsList) {
@@ -51,11 +92,16 @@ public class Farm {
         SQLiteDatabase db = dataBaseHelper.getWritableDatabase();
         // Crear un mapa de valores donde las columnas son las llaves
         ContentValues values = new ContentValues();
-        values.put(DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_ID, animal.getAnimalId());
-        values.put(DataBaseContract.DataBaseEntry.COLUMN_NAME_FARM_ID, this.getIdFarm());
-        values.put(DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_ASOCEBU_ID, animal.getAsocebuId());
+        values.put(DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_ID, animal.getId());
+        values.put(DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_ASOCEBU_FARM_ID, this.getAsocebuID());
+        values.put(DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_REGISTER, animal.getRegister());
+        values.put(DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_CODE, animal.getCode());
+        values.put(DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_SEX, animal.getSex());
         values.put(DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_BIRTHDATE, animal.getBirthdate());
-        values.put(DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_GENDER, animal.getGender());
+        values.put(DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_FATHER_REGISTER, animal.getFatherRegister());
+        values.put(DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_FATHER_CODE, animal.getFatherCode());
+        values.put(DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_MOTHER_REGISTER, animal.getMotherRegister());
+        values.put(DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_MOTHER_CODE, animal.getMotherCode());
         // Insertar la nueva fila
         return db.insert(DataBaseContract.DataBaseEntry.TABLE_NAME_ANIMAL, null, values);
     }
@@ -63,7 +109,8 @@ public class Farm {
     public ArrayList<Animal> getAnimalListDB (Context context){
         this.animalsList = new ArrayList<Animal>();
         Animal animal;
-        String animalId, farmId, asocebuId, birthdate, gender;
+        String register, code, sex, birthdate, fatherRegister, fatherCode, motherRegister, motherCode;
+        int asocebuFarmId, id;
         // usar la clase DataBaseHelper para realizar la operacion de leer
         DataBaseHelper dataBaseHelper = new DataBaseHelper(context);
         // Obtiene la base de datos en modo lectura
@@ -71,10 +118,15 @@ public class Farm {
         // Define cuales columnas quiere solicitar // en este caso todas las de la clase
         String[] projection = {
                 DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_ID,
-                DataBaseContract.DataBaseEntry.COLUMN_NAME_FARM_ID,
-                DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_ASOCEBU_ID,
+                DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_ASOCEBU_FARM_ID,
+                DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_REGISTER,
+                DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_CODE,
+                DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_SEX,
                 DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_BIRTHDATE,
-                DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_GENDER
+                DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_FATHER_REGISTER,
+                DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_FATHER_CODE,
+                DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_MOTHER_REGISTER,
+                DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_MOTHER_CODE
         };
         // Resultados en el cursor
         Cursor cursor = db.query(
@@ -86,15 +138,23 @@ public class Farm {
                 null, // filtros por grupo
                 null // orden
         );
+        cursor.moveToFirst();
         do
         {
-            farmId = cursor.getString(cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_FARM_ID));
-            if (farmId == this.getIdFarm()) {
-                animalId = cursor.getString(cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_ID));
-                asocebuId = cursor.getString(cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_ASOCEBU_ID));
+            asocebuFarmId = cursor.getInt(cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_ASOCEBU_FARM_ID));
+            Log.d("farm-------------", String.valueOf(asocebuFarmId));
+            Log.d("comparacion---------", String.valueOf(this.getAsocebuID()));
+            if (asocebuFarmId == this.getAsocebuID()) {
+                id = cursor.getInt(cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_ID));
+                register = cursor.getString(cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_REGISTER));
+                code = cursor.getString(cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_CODE));
+                sex = cursor.getString(cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_SEX));
                 birthdate = cursor.getString(cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_BIRTHDATE));
-                gender = cursor.getString(cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_GENDER));
-                animal = new Animal(asocebuId,animalId, gender, birthdate);
+                fatherRegister = cursor.getString(cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_FATHER_REGISTER));
+                fatherCode = cursor.getString(cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_FATHER_CODE));
+                motherRegister = cursor.getString(cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_MOTHER_REGISTER));
+                motherCode = cursor.getString(cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_ANIMAL_MOTHER_CODE));
+                animal = new Animal(id, asocebuFarmId, register, code, sex, birthdate, fatherRegister, fatherCode, motherRegister, motherCode);
                 this.animalsList.add(animal);
             }
         }

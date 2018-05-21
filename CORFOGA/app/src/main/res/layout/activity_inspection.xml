@@ -131,9 +131,9 @@
                         android:text="Fecha de nacimiento:"
                         android:textSize="18sp"
                         android:textStyle="bold" />
-
                     <TextView
-                        android:id="@+id/birthdate2"
+                        android:id="@+id/birthdate"
+
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="5"
@@ -148,7 +148,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="16dp"
-                android:orientation="vertical" >
+                android:orientation="vertical"
                 android:layout_marginLeft="@dimen/marginLeftInspection"
                 android:layout_marginRight="@dimen/marginRightInspection">
 
@@ -230,7 +230,7 @@
                         android:layout_weight="2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:entries="@array/alimento"/>/>
+                        android:entries="@array/alimento"/>
                 </LinearLayout>
 
                 <LinearLayout

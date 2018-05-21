@@ -8,9 +8,11 @@ import android.view.MenuInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.bryan.corfoga.Class.Animal;
 import com.example.bryan.corfoga.Adarter.AnimalAdapter;
+import com.example.bryan.corfoga.Class.Global;
 import com.example.bryan.corfoga.R;
 
 import java.util.ArrayList;
@@ -32,25 +34,19 @@ public class AnimalActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Animal selectedAnimal = (Animal) listView.getItemAtPosition(i);
+                Global.getInstance().setAnimal(selectedAnimal);
                 Intent intent = new Intent(getBaseContext(), AlertInspectionNumber.class);
                 startActivity(intent);
             }
         });
     }
     private void llenar() {
-        int x = 0;
-        listItems = new ArrayList<Animal>();
-        while (x < 4) {
-            animal = new Animal("a"+x,"a"+x+x,"a","a");
-            x += 1;
-            listItems.add(animal);
-        }
+        listItems = Global.getInstance().getAnimalsList();
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_options, menu);
         inflater.inflate(R.menu.menu_buscador_animal, menu);
         return true;
     }

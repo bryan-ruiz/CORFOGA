@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.example.bryan.corfoga.Class.Global;
 import com.example.bryan.corfoga.R;
 
 public class AlertInspectionNumber extends AppCompatActivity{
@@ -27,6 +28,7 @@ public class AlertInspectionNumber extends AppCompatActivity{
         inspectionOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Global.getInstance().setVisitNumber(1);
                 Intent intent = new Intent(getBaseContext(), InspectionActivity.class);
                 startActivity(intent);
             }
@@ -34,6 +36,7 @@ public class AlertInspectionNumber extends AppCompatActivity{
         inspectionTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Global.getInstance().setVisitNumber(2);
                 Intent intent = new Intent(getBaseContext(), InspectionActivity.class);
                 startActivity(intent);
             }
@@ -41,6 +44,7 @@ public class AlertInspectionNumber extends AppCompatActivity{
         inspectionThree.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Global.getInstance().setVisitNumber(3);
                 Intent intent = new Intent(getBaseContext(), InspectionActivity.class);
                 startActivity(intent);
             }
@@ -48,17 +52,10 @@ public class AlertInspectionNumber extends AppCompatActivity{
         inspectionFour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Global.getInstance().setVisitNumber(4);
                 Intent intent = new Intent(getBaseContext(), InspectionActivity.class);
                 startActivity(intent);
             }
         });
-
     }
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_options, menu);
-        return true;
-    }
-
 }
