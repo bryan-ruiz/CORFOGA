@@ -29,7 +29,7 @@ public class AlertInspectionNumber extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 Global.getInstance().setVisitNumber(1);
-                Intent intent = new Intent(getBaseContext(), InspectionActivity.class);
+                Intent intent = new Intent(getBaseContext(), AnimalActivity.class);
                 startActivity(intent);
             }
         });
@@ -37,7 +37,7 @@ public class AlertInspectionNumber extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 Global.getInstance().setVisitNumber(2);
-                Intent intent = new Intent(getBaseContext(), InspectionActivity.class);
+                Intent intent = new Intent(getBaseContext(), AnimalActivity.class);
                 startActivity(intent);
             }
         });
@@ -45,7 +45,7 @@ public class AlertInspectionNumber extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 Global.getInstance().setVisitNumber(3);
-                Intent intent = new Intent(getBaseContext(), InspectionActivity.class);
+                Intent intent = new Intent(getBaseContext(), AnimalActivity.class);
                 startActivity(intent);
             }
         });
@@ -53,7 +53,7 @@ public class AlertInspectionNumber extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 Global.getInstance().setVisitNumber(4);
-                Intent intent = new Intent(getBaseContext(), InspectionActivity.class);
+                Intent intent = new Intent(getBaseContext(), AnimalActivity.class);
                 startActivity(intent);
             }
         });

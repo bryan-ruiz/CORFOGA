@@ -42,7 +42,7 @@ public class FarmActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"¡No hay animales disponibles!",Toast.LENGTH_LONG).show();
                 }
                 else {
-                    Intent intent = new Intent(getBaseContext(), AnimalActivity.class);
+                    Intent intent = new Intent(getBaseContext(), AlertInspectionNumber.class);
                     startActivity(intent);
                 }
             }

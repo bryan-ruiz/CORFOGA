@@ -35,7 +35,7 @@ public class AnimalActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Animal selectedAnimal = (Animal) listView.getItemAtPosition(i);
                 Global.getInstance().setAnimal(selectedAnimal);
-                Intent intent = new Intent(getBaseContext(), AlertInspectionNumber.class);
+                Intent intent = new Intent(getBaseContext(), InspectionActivity.class);
                 startActivity(intent);
             }
         });

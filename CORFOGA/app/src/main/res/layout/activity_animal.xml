@@ -18,14 +18,15 @@
             android:textSize="25sp"
             android:textStyle="bold"
             android:layout_marginLeft="20dp"
-            android:textColor="@color/colorWords"/>
+            android:textColor="@color/colorWords"
+            />
 
         <ListView
             android:id="@+id/listFarms"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:divider="@color/colorWords"
+            android:divider="@color/backgroudColor"
             android:dividerHeight="1dp"
             android:footerDividersEnabled="false"
             android:padding="10dp" />

@@ -26,6 +26,16 @@
     <string name="inspectionThree">Inspección 3</string>
     <string name="inspectionFour">Inspección 4</string>
 
+    <!--Nombres de las regiones-->
+    <string name="TodoPaís">Todo el País</string>
+    <string name="RegionPacíficoCentral">Region Pacífico Central</string>
+    <string name="RegionCentral">Region Central</string>
+    <string name="RegiónHuetarAtlántica">Región Huetar Atlántica</string>
+    <string name="RegiónBrunca">Región Brunca</string>
+    <string name="RegiónHuetarNorte">Región Huetar Norte</string>
+    <string name="RegiónChorotega">Región Chorotega</string>
+
+
     <string-array name="alimento">
         <item>1.Pastoreo</item>
         <item>2.Semi Estabulación</item>

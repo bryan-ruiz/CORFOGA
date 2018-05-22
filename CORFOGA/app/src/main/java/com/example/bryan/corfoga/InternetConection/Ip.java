@@ -5,7 +5,7 @@ package com.example.bryan.corfoga.InternetConection;
  */
 
 public class Ip {
-    private static String ipAddress = "http://172.26.39.124:8000";
+    private static String ipAddress = "http://172.24.96.127:8000";
 
     public static String getIpAddress() {
         return ipAddress;

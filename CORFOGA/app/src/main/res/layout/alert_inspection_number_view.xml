@@ -31,7 +31,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="@color/botones"
+                android:backgroundTint="@color/withoutInspection"
                 android:text="@string/inspectionOne"
                 android:textColor="@color/backgroudColor"
                 android:textSize="@dimen/dimenButton" />
@@ -44,7 +44,7 @@
                 android:textColor="@color/backgroudColor"
                 android:textSize="@dimen/dimenButton"
                 android:text="@string/inspectionTwo"
-                android:backgroundTint="@color/botones"/>
+                android:backgroundTint="@color/withoutInspection"/>
 
             <Button
                 android:id="@+id/inspectionThree"
@@ -54,7 +54,7 @@
                 android:textSize="@dimen/dimenButton"
                 android:text="@string/inspectionThree"
                 android:textColor="@color/backgroudColor"
-                android:backgroundTint="@color/botones"/>
+                android:backgroundTint="@color/withoutInspection"/>
 
             <Button
                 android:id="@+id/inspectionFour"
@@ -64,7 +64,7 @@
                 android:textSize="@dimen/dimenButton"
                 android:text="@string/inspectionFour"
                 android:textColor="@color/backgroudColor"
-                android:backgroundTint="@color/botones"/>
+                android:backgroundTint="@color/withoutInspection"/>
         </LinearLayout>
 
     </LinearLayout>
