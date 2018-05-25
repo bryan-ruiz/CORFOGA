@@ -205,10 +205,11 @@ public class Global {
                 datetime = cursor.getString(cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_INSPECTION_DATETIME));
                 visitNumber = cursor.getInt(cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_INSPECTION_VISIT_NUMBER));
                 feedSystem = cursor.getInt(cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_INSPECTION_FEED_SYSTEM));
+                state = cursor.getString(cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_INSPECTION_STATE));
                 weight = cursor.getString(cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_INSPECTION_WEIGHT));
                 scrotalCircumference = cursor.getString(cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_INSPECTION_SCROTAL_CIRCUMFERENCE));
                 comment = cursor.getString(cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_INSPECTION_COMMENT));
-                inspection = new Inspection(inspectionId, asocebuId, userId, datetime, visitNumber, animalId, feedSystem, weight, scrotalCircumference, comment);
+                inspection = new Inspection(inspectionId, asocebuId, userId, datetime, visitNumber, animalId, feedSystem, state, weight, scrotalCircumference, comment);
 
                 this.exportInspectionsList.add(inspection);
             }

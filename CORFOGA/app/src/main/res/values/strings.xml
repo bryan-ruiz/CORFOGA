@@ -42,4 +42,10 @@
         <item>3.Estabulación</item>
         <item>4.Suplemento en Potrero</item>
     </string-array>
+
+    <string-array name="estadoAnimal">
+        <item>1.Vivo</item>
+        <item>2.Muerto o Comercializado</item>
+        <item>3.Situación externa</item>
+    </string-array>
 </resources>

@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/listview_item_row_animal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/withoutInspection"
-    >
+    android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:layout_marginTop="@dimen/marginTop"
-        android:orientation="horizontal"
-        android:layout_margin="10dp">
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="0dp"
-            android:layout_marginLeft="18dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
             android:layout_weight="4"
             android:text="@string/Id_animal"
             android:textSize="18sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/itemsIdAnimal"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="4"
             android:text="TextView"
-            android:textSize="18sp"
-            />
+            android:textSize="18sp" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:layout_marginTop="@dimen/marginTop"
-        android:orientation="horizontal"
-        android:layout_margin="10dp">
+        android:orientation="horizontal">
 
         <TextView
-            android:layout_marginLeft="18dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
             android:layout_weight="4"
             android:text="@string/Asocebu"
             android:textSize="18sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/itemsIdAsocebu"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="4"
             android:text="TextView"
-            android:textSize="18sp"
-            />
+            android:textSize="18sp" />
     </LinearLayout>
 
 </LinearLayout>

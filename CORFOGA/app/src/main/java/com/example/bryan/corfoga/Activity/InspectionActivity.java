@@ -20,7 +20,9 @@ import java.util.Calendar;
 public class InspectionActivity extends AppCompatActivity {
     Animal animal;
     Spinner spinner;
+    Spinner spinner2;
     String spinnerItemSelected;
+    String spinnerItemSelected2;
     TextView register, code, gender, birthdate, weight, scrotalCircumference, comments;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +41,7 @@ public class InspectionActivity extends AppCompatActivity {
         gender.setText(String.valueOf(animal.getSex()));
         birthdate.setText(String.valueOf(animal.getBirthdate()));
         spinner = (Spinner) findViewById(R.id.spinAlimentacion);
+        spinner2 = (Spinner) findViewById(R.id.spinEstado);
     }
 
     @Override
@@ -74,10 +77,19 @@ public class InspectionActivity extends AppCompatActivity {
                     } else {
                         feedingMethodID = 4;
                     }
+                    spinnerItemSelected2 = spinner2.getSelectedItem().toString();
+                    String statusID;
+                    if (spinnerItemSelected2.equals("3.Situación externa")) {
+                        statusID = "Externa";
+                    } else if (spinnerItemSelected2.equals("2.Muerto o Comercializado")) {
+                        statusID = "MuertoComercializado";
+                    } else {
+                        statusID = "Vivo";
+                    }
                     String scrotalC = scrotalCircumference.getText().toString();
                     String observations = comments.getText().toString();
                     //int id, int asocebuFarmID, int userID, String datetime, int visitNumber, int animalID, int feedingMethodID, String weight, String scrotalCircumference, String observations) {
-                    Inspection inspection = new Inspection(id, asocebuFarmID, userID, datetime, visitNumber, animalID, feedingMethodID, weightTotal, scrotalC, observations);
+                    Inspection inspection = new Inspection(id, asocebuFarmID, userID, datetime, visitNumber, animalID, feedingMethodID, statusID, weightTotal, scrotalC, observations);
                     Global.getInstance().getAnimal().addInspectionDB(getApplicationContext(), inspection);
                     Toast.makeText(getApplicationContext(), "¡Datos guardados correctamente, no olvide exportar los datos (vista regiones)!", Toast.LENGTH_LONG).show();
                 }

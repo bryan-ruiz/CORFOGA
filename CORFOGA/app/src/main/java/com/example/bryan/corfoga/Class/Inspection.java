@@ -11,11 +11,12 @@ public class Inspection {
     private int visitNumber;
     private int animalID;
     private int feedingMethodID;
+    private String statusID;
     private String weight;
     private String scrotalCircumference;
     private String observations;
 
-    public Inspection(int id, int asocebuFarmID, int userID, String datetime, int visitNumber, int animalID, int feedingMethodID, String weight, String scrotalCircumference, String observations) {
+    public Inspection(int id, int asocebuFarmID, int userID, String datetime, int visitNumber, int animalID, int feedingMethodID, String statusID, String weight, String scrotalCircumference, String observations) {
         this.id = id;
         this.asocebuFarmID = asocebuFarmID;
         this.userID = userID;
@@ -23,6 +24,7 @@ public class Inspection {
         this.visitNumber = visitNumber;
         this.animalID = animalID;
         this.feedingMethodID = feedingMethodID;
+        this.statusID = statusID;
         this.weight = weight;
         this.scrotalCircumference = scrotalCircumference;
         this.observations = observations;
@@ -98,6 +100,14 @@ public class Inspection {
 
     public void setScrotalCircumference(String scrotalCircumference) {
         this.scrotalCircumference = scrotalCircumference;
+    }
+
+    public String getStatusID() {
+        return statusID;
+    }
+
+    public void setStatusID(String statusID) {
+        this.statusID = statusID;
     }
 
     public String getObservations() {

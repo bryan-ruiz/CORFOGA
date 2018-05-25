@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.example.bryan.corfoga.Class.Animal;
 import com.example.bryan.corfoga.Adarter.AnimalAdapter;
 import com.example.bryan.corfoga.Class.Global;
+import com.example.bryan.corfoga.Class.Inspection;
 import com.example.bryan.corfoga.R;
 
 import java.util.ArrayList;
@@ -22,6 +23,8 @@ public class AnimalActivity extends AppCompatActivity {
     private AnimalAdapter animalAdapter;
     private ArrayList<Animal> listItems;
     private Animal animal;
+    private ArrayList<Inspection> inspectionList;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +44,25 @@ public class AnimalActivity extends AppCompatActivity {
         });
     }
     private void llenar() {
+        //ToDo probar que funcione!
+        inspectionList = Global.getInstance().getInspectionsList();
+        View vistaDelItem = new View(getBaseContext());
+        vistaDelItem = (View)findViewById(R.id.listview_item_row_animal);
+        for (Inspection inspeccion : inspectionList) {
+            if(inspeccion.getStatusID()=="Vivo"){
+
+                vistaDelItem.setBackgroundColor(getResources().getColor(R.color.complete));
+            }
+            if(inspeccion.getStatusID()=="MuertoComercializado"){
+
+                vistaDelItem.setBackgroundColor(getResources().getColor(R.color.deadMarket));
+            }
+            if(inspeccion.getStatusID()=="Externa"){
+
+                vistaDelItem.setBackgroundColor(getResources().getColor(R.color.externalSituation));
+            }
+
+        }
         listItems = Global.getInstance().getAnimalsList();
     }
     @Override
