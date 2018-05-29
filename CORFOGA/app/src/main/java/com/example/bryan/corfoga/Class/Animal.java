@@ -164,6 +164,7 @@ public class Animal {
                 DataBaseContract.DataBaseEntry.COLUMN_NAME_INSPECTION_VISIT_NUMBER,
                 DataBaseContract.DataBaseEntry.COLUMN_NAME_INSPECTION_ANIMAL_ID,
                 DataBaseContract.DataBaseEntry.COLUMN_NAME_INSPECTION_FEED_SYSTEM,
+                DataBaseContract.DataBaseEntry.COLUMN_NAME_INSPECTION_STATE,
                 DataBaseContract.DataBaseEntry.COLUMN_NAME_INSPECTION_WEIGHT,
                 DataBaseContract.DataBaseEntry.COLUMN_NAME_INSPECTION_SCROTAL_CIRCUMFERENCE,
                 DataBaseContract.DataBaseEntry.COLUMN_NAME_INSPECTION_COMMENT
@@ -189,10 +190,11 @@ public class Animal {
                 datetime = cursor.getString(cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_INSPECTION_DATETIME));
                 visitNumber = cursor.getInt(cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_INSPECTION_VISIT_NUMBER));
                 feedSystem = cursor.getInt(cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_INSPECTION_FEED_SYSTEM));
+                state = cursor.getString(cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_INSPECTION_STATE));
                 weight = cursor.getString(cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_INSPECTION_WEIGHT));
                 scrotalCircumference = cursor.getString(cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_INSPECTION_SCROTAL_CIRCUMFERENCE));
                 comment = cursor.getString(cursor.getColumnIndex(DataBaseContract.DataBaseEntry.COLUMN_NAME_INSPECTION_COMMENT));
-                inspection = new Inspection(inspectionId, asocebuId, userId, datetime, visitNumber, animalId, feedSystem, weight, scrotalCircumference, comment);
+                inspection = new Inspection(inspectionId, asocebuId, userId, datetime, visitNumber, animalId, feedSystem, state, weight, scrotalCircumference, comment);
                 this.inspectionsList.add(inspection);
             }
         }

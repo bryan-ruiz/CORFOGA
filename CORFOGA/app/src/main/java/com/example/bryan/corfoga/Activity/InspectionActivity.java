@@ -44,6 +44,7 @@ public class InspectionActivity extends AppCompatActivity {
         spinner2 = (Spinner) findViewById(R.id.spinEstado);
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
@@ -62,7 +63,7 @@ public class InspectionActivity extends AppCompatActivity {
                     int id = Global.getInstance().getInspectionId() -1;
                     Global.getInstance().setInspectionId(id);
                     int asocebuFarmID = animal.getAsocebuFarmID();
-                    int userID = Global.getInstance().getUser().getIdUsuario();
+                    int userID = 0;//Global.getInstance().getUser().getIdUsuario();
                     String datetime = Calendar.getInstance().getTime().toString();
                     int visitNumber = Global.getInstance().getVisitNumber();
                     int animalID = animal.getId();
@@ -81,15 +82,19 @@ public class InspectionActivity extends AppCompatActivity {
                     String statusID;
                     if (spinnerItemSelected2.equals("3.Situación externa")) {
                         statusID = "Externa";
+
                     } else if (spinnerItemSelected2.equals("2.Muerto o Comercializado")) {
                         statusID = "MuertoComercializado";
+
                     } else {
                         statusID = "Vivo";
+
                     }
                     String scrotalC = scrotalCircumference.getText().toString();
                     String observations = comments.getText().toString();
                     //int id, int asocebuFarmID, int userID, String datetime, int visitNumber, int animalID, int feedingMethodID, String weight, String scrotalCircumference, String observations) {
                     Inspection inspection = new Inspection(id, asocebuFarmID, userID, datetime, visitNumber, animalID, feedingMethodID, statusID, weightTotal, scrotalC, observations);
+                    Toast.makeText(getApplicationContext(), ""+inspection.getStatusID(), Toast.LENGTH_LONG).show();
                     Global.getInstance().getAnimal().addInspectionDB(getApplicationContext(), inspection);
                     Toast.makeText(getApplicationContext(), "¡Datos guardados correctamente, no olvide exportar los datos (vista regiones)!", Toast.LENGTH_LONG).show();
                 }

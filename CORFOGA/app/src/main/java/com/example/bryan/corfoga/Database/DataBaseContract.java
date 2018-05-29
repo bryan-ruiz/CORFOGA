@@ -102,6 +102,7 @@ public class DataBaseContract {
                     DataBaseEntry.COLUMN_NAME_INSPECTION_WEIGHT + TEXT_TYPE + COMMA_SEP +
                     DataBaseEntry.COLUMN_NAME_INSPECTION_SCROTAL_CIRCUMFERENCE + TEXT_TYPE + COMMA_SEP +
                     DataBaseEntry.COLUMN_NAME_INSPECTION_COMMENT + TEXT_TYPE + COMMA_SEP +
+                    DataBaseEntry.COLUMN_NAME_INSPECTION_STATE + TEXT_TYPE + COMMA_SEP +
                     "FOREIGN KEY(" + DataBaseEntry.COLUMN_NAME_ANIMAL_ASOCEBU_FARM_ID + ") REFERENCES " +
                     DataBaseEntry.TABLE_NAME_FARM + "(" + DataBaseEntry.COLUMN_NAME_FARM_ASOCEBU_ID +
                     ")"+ COMMA_SEP +

@@ -35,6 +35,28 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL(DataBaseContract.SQL_CREATE_FARM);
         db.execSQL(DataBaseContract.SQL_CREATE_ANIMAL);
         db.execSQL(DataBaseContract.SQL_CREATE_INSPECTION);
+
+
+        //ToDo datos quemados
+        //Datos quemados de prueba:
+        //FARM
+
+        String sqlf = "INSERT or replace INTO Farm (asocebuID, userID, name ,state , region, created_at, updated_at)" +
+                " VALUES('1','2','papa','1','Región Chorotega','5435','5345')" ;
+        db.execSQL(sqlf);
+
+        //Animales
+        String sql = "INSERT or replace INTO Animal (id, asocebuFarmID, register, code ,sex , birthdate, fatherRegister, fatherCode,motherRegister ,motherCode )" +
+                " VALUES('1','1','register','1','M','hoy','papa','2','mama','3')" ;
+
+        db.execSQL(sql);
+
+        //Inspecciones
+
+        String sqli = "INSERT or replace INTO Inspection (id, asocebuFarmID, userID, datetime ,visitNumber , animalID, feedingMethodID, weight,scrotalCircumference,observations,state)" +
+                " VALUES('1','1','2','656','1','1','Pastoreo','150','21','rertrtrt','1.Vivo')" ;
+        db.execSQL(sqli);
+
     }
 
     @Override

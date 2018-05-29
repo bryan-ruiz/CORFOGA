@@ -48,6 +48,7 @@ public class LoginActivity extends AppCompatActivity {
                 try {
                     userName = ((EditText) findViewById(R.id.userName)).getText().toString();
                     password = ((EditText) findViewById(R.id.password)).getText().toString();
+                    toRegionsView();
                     if (!userName.equals("") && !password.equals("")) {
                         Retrofit query = new Retrofit.Builder()
                                 .baseUrl(Ip.getIpAddress())

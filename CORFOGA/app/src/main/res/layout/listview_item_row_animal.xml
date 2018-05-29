@@ -20,6 +20,7 @@
             android:layout_weight="4"
             android:text="@string/Id_animal"
             android:textSize="18sp"
+            android:textColor="@color/backgroudColor"
             android:textStyle="bold" />
 
         <TextView
@@ -28,6 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="4"
             android:text="TextView"
+            android:textColor="@color/backgroudColor"
             android:textSize="18sp" />
     </LinearLayout>
 
@@ -45,6 +47,7 @@
             android:layout_weight="4"
             android:text="@string/Asocebu"
             android:textSize="18sp"
+            android:textColor="@color/backgroudColor"
             android:textStyle="bold" />
 
         <TextView
@@ -53,6 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="4"
             android:text="TextView"
+            android:textColor="@color/backgroudColor"
             android:textSize="18sp" />
     </LinearLayout>
 
