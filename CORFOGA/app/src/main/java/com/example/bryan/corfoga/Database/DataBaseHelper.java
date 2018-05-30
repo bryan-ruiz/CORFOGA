@@ -45,11 +45,19 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 " VALUES('1','2','papa','1','Región Chorotega','5435','5345')" ;
         db.execSQL(sqlf);
 
+        String sqlf2 = "INSERT or replace INTO Farm (asocebuID, userID, name ,state , region, created_at, updated_at)" +
+                " VALUES('1','2','hola','1','Región Chorotega','5435','5345')" ;
+        db.execSQL(sqlf2);
+
         //Animales
         String sql = "INSERT or replace INTO Animal (id, asocebuFarmID, register, code ,sex , birthdate, fatherRegister, fatherCode,motherRegister ,motherCode )" +
                 " VALUES('1','1','register','1','M','hoy','papa','2','mama','3')" ;
 
         db.execSQL(sql);
+        String sql2 = "INSERT or replace INTO Animal (id, asocebuFarmID, register, code ,sex , birthdate, fatherRegister, fatherCode,motherRegister ,motherCode )" +
+                " VALUES('2','1','register','1','M','hoy','papa','2','mama','3')" ;
+
+        db.execSQL(sql2);
 
         //Inspecciones
 

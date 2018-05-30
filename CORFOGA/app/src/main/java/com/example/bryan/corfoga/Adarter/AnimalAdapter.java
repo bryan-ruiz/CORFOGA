@@ -56,7 +56,7 @@ public class AnimalAdapter extends BaseAdapter{
         Inspection ultimaInspeccion = animal.getInspectionListDB(this.context).get(animal.getInspectionsList().size() - 1);
         //Inspection ultimaInspeccion = Global.getInstance().getAnimal().getInspectionListDB(this.context).get((Global.getInstance().getAnimal().getInspectionListDB(this.context).size())-1);
 
-        Toast.makeText(context, ultimaInspeccion.getStatusID() , Toast.LENGTH_LONG).show();
+        //Toast.makeText(context, ultimaInspeccion.getStatusID() , Toast.LENGTH_LONG).show();
         if(ultimaInspeccion.getStatusID()=="Vivo"){
             //TODO si no funciona este color es por this.context ↓  , tambien se puede quemar el color con: Color.parseColor(“#ffffff”)
             view.setBackgroundColor(this.context.getResources().getColor(R.color.complete));
